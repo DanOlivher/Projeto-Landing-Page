@@ -36,14 +36,6 @@ window.addEventListener('scroll', aparecerImagem);
 
 window.addEventListener('resize', adaptarImagem);
 
-function adaptarImagem() {
-  var imagem = document.getElementById('imagem'); // substitua 'minha-imagem' pelo ID da sua imagem
-  var larguraJanela = window.innerWidth;
-  var novaLargura = larguraJanela * 1.0; // ajuste o valor 0.8 conforme necessário
-
-  imagem.style.width = novaLargura + 'px';
-}
-
 function adaptarTexto() {
   var infoParagrafos = document.querySelectorAll('#menuinformacional .info p');
 
@@ -55,11 +47,10 @@ function adaptarTexto() {
     } else if (larguraJanela < 400) {
       paragrafo.style.fontSize = '3em'; // Tamanho do texto relativo ao elemento pai
     } else {
-      paragrafo.style.fontSize = '16px'; // Tamanho padrão do texto
+      paragrafo.style.fontSize = '20px'; // Tamanho padrão do texto
     }
   });
 }
 
 window.addEventListener('resize', adaptarTexto);
 adaptarTexto();
-
